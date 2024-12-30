@@ -1,7 +1,7 @@
-import { NextPage } from "next";
+import { redirect } from "next/navigation";
 
-const Page: NextPage = () => {
-  return <div>Hello, World!</div>;
+const Page = () => {
+  redirect("/2025");
 };
 
 export default Page;

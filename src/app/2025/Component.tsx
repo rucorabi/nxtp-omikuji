@@ -78,8 +78,8 @@ const OmikujiApp = () => {
     }
 
     @keyframes resultIn {
-      0% { transform: scale(0.3) rotate(15deg); opacity: 0; }
-      100% { transform: scale(1) rotate(0deg); opacity: 1; }
+      0% { transform: scale(0.3) opacity: 0; }
+      100% { transform: scale(1) opacity: 1; }
     }
 
     .result-animation {

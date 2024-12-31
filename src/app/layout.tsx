@@ -1,15 +1,9 @@
-import { Metadata } from "next";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { Box, CssBaseline } from "@mui/material";
-
-export const metadata: Metadata = {
-  title: "次星おみくじ",
-  description: "非公式のねくすとぴあおみくじツールです",
-};
+import { CssBaseline } from "@mui/material";
 
 export default function RootLayout({
   children,
@@ -31,17 +25,7 @@ export default function RootLayout({
         />
         <CssBaseline />
       </head>
-      <body>
-        <Box
-          sx={{
-            minHeight: "100vh",
-            background:
-              "linear-gradient(135deg, rgba(255,200,200,0.7), rgba(255,255,200,0.7), rgba(200,255,200,0.7), rgba(200,200,255,0.7))",
-          }}
-        >
-          {children}
-        </Box>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,7 +1,8 @@
 import path from "node:path";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { fortunes, getById } from "../../fortunes";
+import { fortunes } from "../../fortunes";
+import { getById } from "../../../../Fortunes";
 
 type Props = {
   params: Promise<{
@@ -13,7 +14,7 @@ const baseUrl = "https://rucorabi.github.io/nxtp-omikuji";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;
-  const result = getById(id);
+  const result = getById(fortunes, id);
   const title = `次星おみくじ: 結果は${result.result}でした！`;
   const description = result.description;
   const imageUrl = path.join(baseUrl, result.image);
@@ -45,9 +46,7 @@ const Page = () => {
 };
 
 export async function generateStaticParams() {
-  return fortunes.map(({ id }) => ({
-    id,
-  }));
+  return fortunes.map((fortune) => ({ id: fortune.id }));
 }
 
 export default Page;

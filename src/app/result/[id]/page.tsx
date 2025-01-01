@@ -2,7 +2,7 @@ import path from "node:path";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { fortunes } from "../../fortunes";
-import { getById } from "../../../../Fortunes";
+import { getById } from "../../../Fortunes";
 
 type Props = {
   params: Promise<{

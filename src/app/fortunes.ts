@@ -1,4 +1,4 @@
-import { Fortune } from "../../Fortunes";
+import { Fortune } from "../Fortunes";
 
 export const fortunes: Fortune[] = [
   // きすけさん

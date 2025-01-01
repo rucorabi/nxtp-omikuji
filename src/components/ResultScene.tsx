@@ -1,55 +1,30 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { JSX } from "react";
+
 import { Typography, Button, Box, Stack, Zoom } from "@mui/material";
-import { basePath, imagePath } from "../utils";
+import { imagePath } from "../utils";
 import { Fortune } from "../Fortunes";
+import { shareForX } from "../share";
 
 type Props = {
-  userName: string;
+  targetText: string;
   fortune: Fortune;
   onClikcOneMore: () => void;
+  shareButton?: JSX.Element;
+  resetButtonText: string;
 };
 
-const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
-  const shareOnX = () => {
-    const text = `${userName}さんの運勢は.....${fortune.result}です！\n${fortune.description}\n #次星おみくじ2025\n\n`;
-    const url =
-      "https://" +
-      window.location.hostname +
-      basePath +
-      `/2025/result/${fortune.id}/`;
-    window.open(
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-        text
-      )}&url=${encodeURIComponent(url)}`
-    );
-  };
-
-  // アニメーションのスタイル定義
-  const keyframes = `
-    @keyframes resultIn {
-      0% { transform: scale(0.3) opacity: 0; }
-      100% { transform: scale(1) opacity: 1; }
-    }
-
-    .result-animation {
-      animation: resultIn 0.6s ease-out forwards;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    .float-animation {
-      animation: floatUp 0.6s ease-out forwards;
-    }
-  `;
-
+const ResultScene = ({
+  targetText,
+  fortune,
+  resetButtonText,
+  shareButton,
+  onClikcOneMore,
+}: Props) => {
   return (
     <>
-      <style>{keyframes}</style>
+      <KeyFrames />
       <Stack spacing={3} alignItems="center">
         <Typography
           variant="h6"
@@ -60,7 +35,7 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
             animationFillMode: "forwards",
           }}
         >
-          {userName}さんの運勢は.....
+          {targetText}
         </Typography>
         <Zoom in timeout={500}>
           <Box
@@ -72,16 +47,6 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
               alignItems: "center",
             }}
           >
-            <Typography
-              variant="h3"
-              fontWeight="bold"
-              sx={{
-                color: fortune.color,
-                mb: 2,
-              }}
-            >
-              {fortune.result}
-            </Typography>
             <Box
               sx={{
                 width: "100%",
@@ -96,6 +61,7 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
               <Box
                 component="img"
                 src={imagePath(fortune.image)}
+                alt={fortune.result}
                 sx={{
                   verticalAlign: "bottom",
                   width: "100%",
@@ -107,6 +73,7 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
             </Box>
           </Box>
         </Zoom>
+
         <Typography
           variant="body1"
           color="text.secondary"
@@ -135,21 +102,9 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
           }}
         >
           <Button variant="outlined" size="large" onClick={onClikcOneMore}>
-            もう一回引く
+            {resetButtonText}
           </Button>
-          <Button
-            variant="contained"
-            size="large"
-            onClick={shareOnX}
-            sx={{
-              px: 5,
-              bgcolor: "black",
-              letterSpacing: 1,
-              "&:hover": { bgcolor: "#333" },
-            }}
-          >
-            Xで共有
-          </Button>
+          {shareButton}
         </Stack>
       </Stack>
     </>
@@ -157,3 +112,57 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
 };
 
 export default ResultScene;
+
+export const ResetButtonText = Object.freeze({
+  oneMore: "もう一回引く",
+  draw: "おみくじを引く",
+});
+
+export const ShareForXButton = ({
+  userName,
+  fortune,
+}: {
+  userName: string;
+  fortune: Fortune;
+}) => {
+  const shareOnX = () => shareForX(userName, fortune);
+  return (
+    <Button
+      variant="contained"
+      size="large"
+      onClick={shareOnX}
+      sx={{
+        px: 5,
+        bgcolor: "black",
+        letterSpacing: 1,
+        "&:hover": { bgcolor: "#333" },
+      }}
+    >
+      Xで共有
+    </Button>
+  );
+};
+
+const KeyFrames = React.memo(() => {
+  // アニメーションのスタイル定義
+  const keyframes = `
+    @keyframes resultIn {
+      0% { transform: scale(0.3) opacity: 0; }
+      100% { transform: scale(1) opacity: 1; }
+    }
+
+    .result-animation {
+      animation: resultIn 0.6s ease-out forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .float-animation {
+      animation: floatUp 0.6s ease-out forwards;
+    }
+  `;
+  return <style>{keyframes}</style>;
+});

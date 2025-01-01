@@ -1,8 +1,10 @@
+import { use } from "react";
 import path from "node:path";
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { fortunes } from "../../fortunes";
 import { getById } from "../../../Fortunes";
+import Template from "../../../components/Template";
+import Component from "./Component";
 
 type Props = {
   params: Promise<{
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `次星おみくじ`;
   const description = result.description;
   const imageUrl = path.join(baseUrl, result.image);
+
   return {
     title,
     description,
@@ -41,8 +44,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const Page = () => {
-  redirect("/2025");
+const Page = ({ params }: Props) => {
+  const id = use(params).id;
+  const fortune = getById(fortunes, id);
+
+  return (
+    <Template title="次星おみくじ2025">
+      <Component fortune={fortune} />
+    </Template>
+  );
 };
 
 export async function generateStaticParams() {

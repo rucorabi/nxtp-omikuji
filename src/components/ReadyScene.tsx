@@ -24,22 +24,9 @@ const ReadyScene = ({
   isDrawing,
   onClickDraw,
 }: Props) => {
-  // アニメーションのスタイル定義
-  const keyframes = `
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px) rotate(-5deg); }
-      75% { transform: translateX(5px) rotate(5deg); }
-    }
-
-    .shake-animation {
-      animation: shake 0.5s infinite;
-    }
-    `;
-
   return (
     <>
-      <style>{keyframes}</style>
+      <KeyFrames />
       <Stack spacing={3}>
         <Typography
           variant="body1"
@@ -81,3 +68,19 @@ const ReadyScene = ({
 };
 
 export default ReadyScene;
+
+const KeyFrames = React.memo(() => {
+  // アニメーションのスタイル定義
+  const keyframes = `
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px) rotate(-5deg); }
+      75% { transform: translateX(5px) rotate(5deg); }
+    }
+
+    .shake-animation {
+      animation: shake 0.5s infinite;
+    }
+    `;
+  return <style>{keyframes}</style>;
+});

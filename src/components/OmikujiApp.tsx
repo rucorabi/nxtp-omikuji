@@ -16,11 +16,12 @@ const OmikujiApp = ({ fortunes }: Props) => {
   const [fortune, setFortune] = useState<Fortune>(null);
   const [isDrawn, setIsDrawn] = useState(false);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [showResult, setShowResult] = useState(false);
 
   const drawFortune = useCallback(async () => {
     setIsDrawing(true);
     const selectedFortune = getWeightedRandomFortune(fortunes);
+    const img = new Image();
+    img.src = selectedFortune.image; // preload
 
     // アニメーションのための遅延
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -28,11 +29,9 @@ const OmikujiApp = ({ fortunes }: Props) => {
     setFortune(selectedFortune);
     setIsDrawn(true);
     setIsDrawing(false);
-    setShowResult(true);
   }, []);
 
   const reset = useCallback(() => {
-    setShowResult(false);
     setTimeout(() => {
       setIsDrawn(false);
       setFortune(null);

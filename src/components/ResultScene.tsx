@@ -60,7 +60,7 @@ const ResultScene = ({
             >
               <Box
                 component="img"
-                src={imagePath(fortune.image)}
+                src={fortune.image}
                 alt={fortune.result}
                 sx={{
                   verticalAlign: "bottom",

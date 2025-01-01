@@ -1,4 +1,5 @@
 import { Fortune } from "../Fortunes";
+import { imagePath } from "../utils";
 
 export const fortunes: Fortune[] = [
   // きすけさん
@@ -71,4 +72,7 @@ export const fortunes: Fortune[] = [
     image: "/images/hayamaluna/yosukichi.jpg",
     weight: 10,
   },
-];
+].map((org) => ({
+  ...org,
+  image: imagePath(org.image), // basePathを補完する
+}));

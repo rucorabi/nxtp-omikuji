@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = getById(fortunes, id);
   const title = `次星おみくじ`;
   const description = result.description;
-  const imageUrl = path.join(baseUrl, imagePath(result.image));
+  const imageUrl = path.join(baseUrl, result.image);
   return {
     title,
     description,

@@ -27,6 +27,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment: Production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -73,9 +74,15 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Print environment variables
+        run: |
+          echo "BASE_PATH: ${{ vars.BASE_PATH }}"
+          echo "PUBLISH_HOSTNAME: ${{ vars.PUBLISH_HOSTNAME }}"
       - name: Build with Next.js
         env:
           NODE_ENV: production
+          BASE_PATH: ${{ vars.BASE_PATH }}
+          PUBLISH_HOSTNAME: ${{ vars.PUBLISH_HOSTNAME }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

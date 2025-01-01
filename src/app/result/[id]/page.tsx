@@ -12,7 +12,7 @@ type Props = {
   }>;
 };
 
-const baseUrl = `https://${process.env.HOSTNAME}`;
+const baseUrl = `https://${process.env.PUBLISH_HOSTNAME}`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;

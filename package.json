@@ -2,7 +2,9 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev"
+    "dev": "next dev",
+    "preserve": "next build",
+    "serve": "serve out"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@types/node": "22.10.2",
     "@types/react": "19.0.2",
+    "serve": "^14.2.4",
     "typescript": "5.7.2"
   }
 }

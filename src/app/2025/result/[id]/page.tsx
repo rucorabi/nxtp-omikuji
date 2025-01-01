@@ -10,12 +10,12 @@ type Props = {
   }>;
 };
 
-const baseUrl = "https://rucorabi.github.io/nxtp-omikuji";
+const baseUrl = `https://${process.env.HOSTNAME}`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;
   const result = getById(fortunes, id);
-  const title = `次星おみくじ: 結果は${result.result}でした！`;
+  const title = `次星おみくじ`;
   const description = result.description;
   const imageUrl = path.join(baseUrl, result.image);
   return {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: imageUrl,
           width: 640,
           height: 480,
-          alt: result.alt,
+          alt: "抽選結果の画像です",
         },
       ],
     },

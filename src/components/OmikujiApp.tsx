@@ -40,17 +40,21 @@ const OmikujiApp = ({ fortunes }: Props) => {
   }, []);
 
   return !isDrawn ? (
-    <Fade in={!isDrawn}>
-      <ReadyScene
-        userName={name}
-        onUserNameChange={setName}
-        isDrawing={isDrawing}
-        onClickDraw={drawFortune}
-      />
+    <Fade in={!isDrawn} timeout={10}>
+      <div>
+        <ReadyScene
+          userName={name}
+          onUserNameChange={setName}
+          isDrawing={isDrawing}
+          onClickDraw={drawFortune}
+        />
+      </div>
     </Fade>
   ) : (
-    <Fade in={showResult}>
-      <ResultScene userName={name} fortune={fortune} onClikcOneMore={reset} />
+    <Fade in={showResult} timeout={10}>
+      <div>
+        <ResultScene userName={name} fortune={fortune} onClikcOneMore={reset} />
+      </div>
     </Fade>
   );
 };

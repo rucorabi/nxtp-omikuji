@@ -13,9 +13,12 @@ type Props = {
 
 const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
   const shareOnX = () => {
-    const text = `${name}さんの運勢は.....${fortune.result}です！\n\n#次星おみくじ2025\n\n`;
+    const text = `${userName}さんの運勢は.....${fortune.result}です！\n${fortune.description}\n #次星おみくじ2025\n\n`;
     const url =
-      window.location.hostname + basePath + `/2025/result/${fortune.id}/`;
+      "https://" +
+      window.location.hostname +
+      basePath +
+      `/2025/result/${fortune.id}/`;
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(
         text
@@ -93,7 +96,6 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
               <Box
                 component="img"
                 src={imagePath(fortune.image)}
-                alt={fortune.alt}
                 sx={{
                   verticalAlign: "bottom",
                   width: "100%",
@@ -115,7 +117,12 @@ const ResultScene = ({ userName, fortune, onClikcOneMore }: Props) => {
             animationFillMode: "forwards",
           }}
         >
-          {fortune.description}
+          {fortune.description.split("\n").map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
         </Typography>
         <Stack
           direction="row"

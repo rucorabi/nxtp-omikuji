@@ -1,44 +1,74 @@
-import { genFortunes } from "../../Fortunes";
+import { Fortune } from "../../Fortunes";
 
-export const fortunes = genFortunes([
+export const fortunes: Fortune[] = [
+  // きすけさん
   {
-    id: "daikichi",
-    result: "大吉",
-    description: "最高の運勢です！すべてが上手くいきそう！",
-    color: "#e53935",
-    alt: "大吉を表す縁起の良い画像",
-    weight: 10, // 10%
+    id: "001",
+    result: "ちゃむ吉",
+    description:
+      "ちゃむからエネルギーが流れ込んできます。\n寿司またはラーメンを食べることで、さらに運気が上昇するでしょう。",
+    color: "#00AAFF",
+    image: "/images/kisuke/01_chamukichi.png",
+    weight: 10,
   },
   {
-    id: "chukichi",
+    id: "002",
+    result: "吉",
+    description:
+      "歌が上手になりそうな気配。カラオケでほめられるでしょう。\n歌った後は、ダッツを食べて喉を休めるべし。",
+    color: "#00AAFF",
+    image: "/images/kisuke/02_kichi.png",
+    weight: 10,
+  },
+  {
+    id: "003",
     result: "中吉",
-    description: "とても良い運勢です。前向きに進みましょう！",
-    color: "#fb8c00",
-    alt: "中吉を表す良い画像",
-    weight: 25, // 25%
+    description:
+      "ソラちゃんのように、物事の細かい部分までしっかり気づくことができるでしょう。\n気配り上手でほめられるかも？",
+    color: "#00AAFF",
+    image: "/images/kisuke/03_chukichi.png",
+    weight: 10,
   },
   {
-    id: "shokichi",
+    id: "004",
     result: "小吉",
-    description: "穏やかな運勢です。着実に進みましょう。",
-    color: "#fdd835",
-    alt: "小吉を表す穏やかな画像",
-    weight: 30, // 30%
+    description:
+      "ぎゅぎゅっと運気が上昇してきそうな気配。\nラッキーアイテムは中華料理。町中華へ食べに行ってみましょう。",
+    color: "#e98484",
+    image: "/images/kisuke/04_shokichi.png",
+    weight: 10,
   },
   {
-    id: "suekichi",
-    result: "末吉",
-    description: "平凡な運勢です。慎重に進めましょう。",
-    color: "#43a047",
-    alt: "末吉を表す平凡な画像",
-    weight: 25, // 25%
+    id: "005",
+    result: "バト吉",
+    description: "常バトからツッコミとはなんたるかという話を１時間聞けますﾔｯﾀﾈ",
+    color: "#2c5aad",
+    image: "/images/uzukimi/01_batokichi.png",
+    weight: 10,
   },
   {
-    id: "kyo",
-    result: "凶",
-    description: "少し運気が低めです。気を付けて行動しましょう。",
-    color: "#1e88e5",
-    alt: "凶を表す画像",
-    weight: 10, // 10%
+    id: "006",
+    result: "大吉",
+    description: "ソラコと目が合った君は今年最強だ！！！",
+    color: "#f3b0cd",
+    image: "/images/uzukimi/02_daikichi.png",
+    weight: 10,
   },
-]);
+  {
+    id: "007",
+    result: "小吉",
+    description: "加伊那からみかんが貰えます",
+    color: "#5e965c",
+    image: "/images/uzukimi/03_shokichi.png",
+    weight: 10,
+  },
+  {
+    id: "008",
+    result: "よす吉",
+    description:
+      "縁の下の力持ち！爆裂はたらきアニマル！！\n休息しっかり摂ることで、良い流れを掴みましょう。",
+    color: "#ff9537",
+    image: "/images/hayamaluna/yosukichi.jpg",
+    weight: 10,
+  },
+];

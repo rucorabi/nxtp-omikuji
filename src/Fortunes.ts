@@ -4,18 +4,10 @@ export type Fortune = {
   description: string;
   color: string;
   image: string;
-  alt: string;
   weight: number;
 };
 
 export type Fortunes = Fortune[];
-
-export function genFortunes(part: Omit<Fortune, "image">[], basePath = "") {
-  return part.map((fortune, i) => ({
-    ...fortune,
-    image: `${basePath}/images/${i}.png`,
-  }));
-}
 
 // 重み付き確率でおみくじを選択する関数
 export function getWeightedRandomFortune(fortunes: Fortunes): Fortune {
@@ -25,7 +17,7 @@ export function getWeightedRandomFortune(fortunes: Fortunes): Fortune {
   );
   let random = Math.random() * totalWeight;
 
-  for (const fortune of this.fortunes) {
+  for (const fortune of fortunes) {
     random -= fortune.weight;
     if (random <= 0) {
       return fortune;
@@ -35,7 +27,7 @@ export function getWeightedRandomFortune(fortunes: Fortunes): Fortune {
 }
 
 export function getById(fortunes: Fortunes, id: string): Fortune {
-  const found = this.fortunes.find((fortune) => fortune.id === id);
+  const found = fortunes.find((fortune) => fortune.id === id);
   if (found) return found;
   throw new Error(`Fortune not found: ${id}`);
 }

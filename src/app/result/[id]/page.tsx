@@ -5,6 +5,7 @@ import { fortunes } from "../../fortunes";
 import { getById } from "../../../Fortunes";
 import Template from "../../../components/Template";
 import Component from "./Component";
+import { imagePath } from "../../../utils";
 
 type Props = {
   params: Promise<{
@@ -19,8 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = getById(fortunes, id);
   const title = `次星おみくじ`;
   const description = result.description;
-  const imageUrl = path.join(baseUrl, result.image);
-
+  const imageUrl = path.join(baseUrl, imagePath(result.image));
   return {
     title,
     description,

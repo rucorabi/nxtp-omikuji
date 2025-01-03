@@ -96,7 +96,7 @@ const ResultScene = ({
           <Typography variant="body2" color="text.secondary">
             提供:
             <Link
-              href={`https://x.com/i/user/${fortune.creator.userId}`}
+              href={`https://x.com/${fortune.creator.screenName}`}
               target="_blank"
               rel="noopener noreferrer"
               sx={{

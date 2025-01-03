@@ -19,7 +19,7 @@ const Component = ({ fortune }: Props) => {
   return (
     <ResultScene
       fortune={fortune}
-      targetText="占いの結果は....."
+      targetText="おみくじの結果は....."
       resetButtonText={ResetButtonText.draw}
       onClikcOneMore={handleClickOneMore}
     />

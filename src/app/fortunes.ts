@@ -1,6 +1,6 @@
 import { Fortune } from "../Fortunes";
 import { imagePath } from "../utils";
-import data from "./fortunesData.json";
+import data from "../../fortunesData.json";
 
 export const fortunes: Fortune[] = data.map(
   ({ creatorScreenName, creatorName, creatorUserId, fileName, ...rest }) => ({

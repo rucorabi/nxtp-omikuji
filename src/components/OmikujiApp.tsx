@@ -23,7 +23,7 @@ const OmikujiApp = ({ fortunes }: Props) => {
 
   const [userName, setUserName] = useState<string>(fortune ? "デバッグ" : "");
   const [isDrawn, setIsDrawn] = useState(!!fortune);
-  const [isDrawing, setIsDrawing] = useState(!!fortune);
+  const [isDrawing, setIsDrawing] = useState(false);
 
   const drawFortune = useCallback(async () => {
     setIsDrawing(true);

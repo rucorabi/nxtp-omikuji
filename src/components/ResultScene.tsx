@@ -1,9 +1,7 @@
 "use client";
 
 import React, { JSX } from "react";
-
-import { Typography, Button, Box, Stack, Zoom } from "@mui/material";
-import { imagePath } from "../utils";
+import { Typography, Button, Box, Stack, Zoom, Link } from "@mui/material";
 import { Fortune } from "../Fortunes";
 import { shareForX } from "../share";
 
@@ -25,7 +23,7 @@ const ResultScene = ({
   return (
     <>
       <KeyFrames />
-      <Stack spacing={3} alignItems="center">
+      <Stack alignItems="center">
         <Typography
           variant="h6"
           className="float-animation"
@@ -37,10 +35,12 @@ const ResultScene = ({
         >
           {targetText}
         </Typography>
+
         <Zoom in timeout={500}>
           <Box
             className="result-animation"
             sx={{
+              mt: 2,
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
@@ -52,7 +52,6 @@ const ResultScene = ({
                 width: "100%",
                 maxWidth: 640,
                 position: "relative",
-                mb: 2,
                 overflow: "hidden",
                 borderRadius: 2,
                 boxShadow: 3,
@@ -79,6 +78,7 @@ const ResultScene = ({
           color="text.secondary"
           className="float-animation"
           sx={{
+            mt: 4,
             opacity: 0,
             animationDelay: "1.3s",
             animationFillMode: "forwards",
@@ -91,11 +91,34 @@ const ResultScene = ({
             </React.Fragment>
           ))}
         </Typography>
+
+        <Box textAlign="right" width="100%" sx={{ mt: 4 }}>
+          <Typography variant="body2" color="text.secondary">
+            提供:
+            <Link
+              href={`https://x.com/i/user/${fortune.creator.userId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "inherit",
+                textDecoration: "none",
+                ml: 1,
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+              }}
+            >
+              {fortune.creator.name}様 (@{fortune.creator.screenName})
+            </Link>
+          </Typography>
+        </Box>
+
         <Stack
           direction="row"
           spacing={2}
           className="float-animation"
           sx={{
+            mt: 4,
             opacity: 0,
             animationDelay: "1.6s",
             animationFillMode: "forwards",
@@ -144,7 +167,6 @@ export const ShareForXButton = ({
 };
 
 const KeyFrames = React.memo(() => {
-  // アニメーションのスタイル定義
   const keyframes = `
     @keyframes resultIn {
       0% { transform: scale(0.3) opacity: 0; }

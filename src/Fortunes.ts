@@ -4,6 +4,11 @@ export type Fortune = {
   description: string;
   image: string;
   weight: number;
+  creator: {
+    name: string;
+    userId: string;
+    screenName: string;
+  };
 };
 
 export type Fortunes = Fortune[];

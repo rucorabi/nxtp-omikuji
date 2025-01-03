@@ -6,7 +6,7 @@ export function shareForX(userName: string, fortune: Fortune) {
 
 ${fortune.description}
 
-#次星おみくじ2025\n\n`;
+\n\n`;
 
   const url = window.location.origin + basePath + `/result/${fortune.id}/`;
 

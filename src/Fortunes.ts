@@ -2,7 +2,6 @@ export type Fortune = {
   id: string;
   result: string;
   description: string;
-  color: string;
   image: string;
   weight: number;
 };

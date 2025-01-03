@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { NextPage, Metadata } from "next";
 import OmikujiApp from "../components/OmikujiApp";
 import { fortunes } from "./fortunes";
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 const Page: NextPage = () => {
   return (
     <Template title="次星おみくじ2025">
-      <OmikujiApp fortunes={fortunes} />
+      <Suspense>
+        <OmikujiApp fortunes={fortunes} />
+      </Suspense>
     </Template>
   );
 };

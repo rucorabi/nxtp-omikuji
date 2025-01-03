@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import { Fade } from "@mui/material";
 
 import ReadyScene from "./ReadyScene";
@@ -12,10 +13,17 @@ type Props = {
 };
 
 const OmikujiApp = ({ fortunes }: Props) => {
-  const [userName, setUserName] = useState("");
-  const [fortune, setFortune] = useState<Fortune>(null);
-  const [isDrawn, setIsDrawn] = useState(false);
-  const [isDrawing, setIsDrawing] = useState(false);
+  const params = useSearchParams();
+  const debugResultId = params.get("__debug");
+
+  const [fortune, setFortune] = useState<Fortune>(() => {
+    if (!debugResultId) return null;
+    return fortunes.find((f) => f.id === debugResultId);
+  });
+
+  const [userName, setUserName] = useState<string>(fortune ? "デバッグ" : "");
+  const [isDrawn, setIsDrawn] = useState(!!fortune);
+  const [isDrawing, setIsDrawing] = useState(!!fortune);
 
   const drawFortune = useCallback(async () => {
     setIsDrawing(true);

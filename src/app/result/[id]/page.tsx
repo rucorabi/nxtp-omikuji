@@ -5,7 +5,6 @@ import { fortunes } from "../../fortunes";
 import { getById } from "../../../Fortunes";
 import Template from "../../../components/Template";
 import Component from "./Component";
-import { imagePath } from "../../../utils";
 
 type Props = {
   params: Promise<{
@@ -31,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: imageUrl,
-          width: 640,
-          height: 480,
+          width: 800,
+          height: 418,
           alt: "抽選結果の画像です",
         },
       ],

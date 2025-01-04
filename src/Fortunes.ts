@@ -6,7 +6,6 @@ export type Fortune = {
   weight: number;
   creator: {
     name: string;
-    userId: string;
     screenName: string;
   };
 };

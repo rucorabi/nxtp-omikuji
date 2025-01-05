@@ -81,8 +81,8 @@ jobs:
       - name: Build with Next.js
         env:
           NODE_ENV: production
-          BASE_PATH: ${{ vars.BASE_PATH }}
-          PUBLISH_HOSTNAME: ${{ vars.PUBLISH_HOSTNAME }}
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.BASE_PATH }}
+          NEXT_PUBLIC_PUBLISH_HOSTNAME: ${{ vars.PUBLISH_HOSTNAME }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

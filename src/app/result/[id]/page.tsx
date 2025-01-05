@@ -5,6 +5,7 @@ import { fortunes } from "../../fortunes";
 import { getById } from "../../../Fortunes";
 import Template from "../../../components/Template";
 import Component from "./Component";
+import { PUBLISH_HOSTNAME } from "../../../config";
 
 type Props = {
   params: Promise<{
@@ -12,7 +13,7 @@ type Props = {
   }>;
 };
 
-const baseUrl = `https://${process.env.PUBLISH_HOSTNAME}`;
+const baseUrl = `https://${PUBLISH_HOSTNAME}`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;

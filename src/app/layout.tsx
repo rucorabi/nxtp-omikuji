@@ -8,8 +8,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import { CssBaseline } from "@mui/material";
-
-const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
+import { GA_TRACKING_ID } from "../config";
 
 export default function RootLayout({
   children,

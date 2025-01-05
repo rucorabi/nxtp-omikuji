@@ -1,5 +1,5 @@
-const basePath = process.env.BASE_PATH ?? "";
+import { BASE_PATH } from "./config";
 
 export const imagePath = (image: string) => {
-  return `${basePath}/${image}`.replace("//", "/");
+  return `${BASE_PATH}/${image}`.replace("//", "/");
 };

@@ -5,9 +5,10 @@ import OmikujiApp from "../components/OmikujiApp";
 import { fortunes } from "./fortunes";
 import Template from "../components/Template";
 import { imagePath } from "../utils";
+import { PUBLISH_HOSTNAME } from "../config";
 
 export function generateMetadata(): Metadata {
-  const baseUrl = `https://${process.env.PUBLISH_HOSTNAME}`;
+  const baseUrl = `https://${PUBLISH_HOSTNAME}`;
 
   return {
     title: "次星おみくじ2025",

@@ -1,6 +1,6 @@
 import { Fortune } from "./Fortunes";
-import { basePath } from "./utils";
 
+const basePath = process.env.BASE_PATH ?? "";
 export function shareForX(userName: string, fortune: Fortune) {
   const text = `${userName}さんの運勢は...【${fortune.result}】です！
 

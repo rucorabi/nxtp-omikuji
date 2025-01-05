@@ -1,11 +1,15 @@
 import React from "react";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import { CssBaseline } from "@mui/material";
+
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 
 export default function RootLayout({
   children,
@@ -28,6 +32,7 @@ export default function RootLayout({
         <CssBaseline />
       </head>
       <body>{children}</body>
+      {GA_TRACKING_ID && <GoogleAnalytics gaId={GA_TRACKING_ID} />}
     </html>
   );
 }

@@ -1,3 +1,4 @@
+import path from "node:path";
 import { Suspense } from "react";
 import { NextPage, Metadata } from "next";
 import OmikujiApp from "../components/OmikujiApp";
@@ -6,6 +7,8 @@ import Template from "../components/Template";
 import { imagePath } from "../utils";
 
 export function generateMetadata(): Metadata {
+  const baseUrl = `https://${process.env.PUBLISH_HOSTNAME}`;
+
   return {
     title: "次星おみくじ2025",
     description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
@@ -15,7 +18,7 @@ export function generateMetadata(): Metadata {
       description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
       images: [
         {
-          url: imagePath("/images/logo.png"),
+          url: path.join(baseUrl, imagePath("/images/logo.png")),
           width: 600,
           height: 600,
           alt: "アプリのロゴ",

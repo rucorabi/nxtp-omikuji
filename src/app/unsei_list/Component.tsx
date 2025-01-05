@@ -97,7 +97,7 @@ const FortuneCard = ({ fortune }: { fortune: Fortune }) => {
   );
 };
 
-const Page = () => {
+const Component = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 4 }}>
@@ -123,4 +123,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Component;

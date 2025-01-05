@@ -3,10 +3,31 @@ import { NextPage, Metadata } from "next";
 import OmikujiApp from "../components/OmikujiApp";
 import { fortunes } from "./fortunes";
 import Template from "../components/Template";
+import { imagePath } from "../utils";
 
-export const metadata: Metadata = {
-  title: "次星おみくじ2025",
-};
+export function generateMetadata(): Metadata {
+  return {
+    title: "次星おみくじ2025",
+    description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
+    openGraph: {
+      type: "website",
+      title: "次星おみくじ2025",
+      description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
+      images: [
+        {
+          url: imagePath("/images/logo.png"),
+          width: 600,
+          height: 600,
+          alt: "アプリのロゴ",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      creator: "@rucorabi_",
+    },
+  };
+}
 
 const Page: NextPage = () => {
   return (

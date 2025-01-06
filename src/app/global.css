@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 200, 200, 0.7),
+      rgba(255, 255, 200, 0.7),
+      rgba(200, 255, 200, 0.7),
+      rgba(200, 200, 255, 0.7)
+    )
+    fixed;
+}

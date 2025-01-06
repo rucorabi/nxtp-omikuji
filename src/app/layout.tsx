@@ -6,6 +6,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import "./global.css";
 
 import { CssBaseline } from "@mui/material";
 import { GA_TRACKING_ID } from "../config";

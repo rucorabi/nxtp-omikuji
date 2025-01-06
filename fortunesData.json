@@ -1,6 +1,6 @@
 [
   {
-    "id": "ML6Cb8eX",
+    "id": "jHvGcW0Q",
     "result": "ちゃむ吉",
     "description": "ちゃむからエネルギーが流れ込んできます。\n寿司またはラーメンを食べることで、さらに運気が上昇するでしょう。",
     "fileName": "01_chamukichi.png",
@@ -9,7 +9,7 @@
     "weight": 10
   },
   {
-    "id": "gQ6Fn84p",
+    "id": "tH2QCIdU",
     "result": "吉",
     "description": "歌が上手になりそうな気配。カラオケでほめられるでしょう。\n歌った後は、ダッツを食べて喉を休めるべし。",
     "fileName": "02_kichi.png",
@@ -18,7 +18,7 @@
     "weight": 10
   },
   {
-    "id": "0Qg86evB",
+    "id": "QxKe2YWb",
     "result": "中吉",
     "description": "ソラちゃんのように、物事の細かい部分までしっかり気づくことができるでしょう。\n気配り上手でほめられるかも？",
     "fileName": "03_chukichi.png",
@@ -27,7 +27,7 @@
     "weight": 10
   },
   {
-    "id": "F5cPPCJ3",
+    "id": "byiQjbju",
     "result": "小吉",
     "description": "ぎゅぎゅっと運気が上昇してきそうな気配。\nラッキーアイテムは中華料理。町中華へ食べに行ってみましょう。",
     "fileName": "04_shokichi.png",
@@ -36,7 +36,7 @@
     "weight": 10
   },
   {
-    "id": "wTknyn2o",
+    "id": "Nr43P01s",
     "result": "末吉",
     "description": "今悩んでいることも、これからだんだん晴れていくでしょう。\r\nラッキーアイテムはカレー。スパイスの香りでリラックスすると吉。",
     "fileName": "05_suekichi.png",
@@ -45,7 +45,7 @@
     "weight": 10
   },
   {
-    "id": "utypqLkt",
+    "id": "pEU3IYIH",
     "result": "末吉",
     "description": "一見過激な発言も、ラインに注意すれば盛り上がるでしょう。\n見極めが肝心、つづりさんの配信を参考にすると吉。",
     "fileName": "06_suekichi.png",
@@ -54,7 +54,7 @@
     "weight": 10
   },
   {
-    "id": "SCXuRaDk",
+    "id": "kICiGBIi",
     "result": "光あれ吉",
     "description": "聖女のご利益により、\n光あれ～と唱えれば悩みがたちどころに良い方向へ向かうでしょう。無理しすぎないのがポイント",
     "fileName": "07_hikariarekichi.png",
@@ -63,7 +63,7 @@
     "weight": 10
   },
   {
-    "id": "jnnH2yt3",
+    "id": "Ooctlkow",
     "result": "中吉",
     "description": "仕事運が上昇してくる気配。\nたくさん仕事が舞い込むかもしれませんが、抱え込まずに周りに助けを求めると吉。\nエナジードリンクはほどほどに。",
     "fileName": "08_chukichi.png",
@@ -72,7 +72,7 @@
     "weight": 10
   },
   {
-    "id": "jBrESo2Q",
+    "id": "E2flQyuK",
     "result": "吉",
     "description": "推し活のエネルギーが湧いてきます。\n好きなものに打ち込むとよいでしょう。\nオタトークできる仲間も見つかるかも。",
     "fileName": "09_kichi.png",
@@ -81,7 +81,7 @@
     "weight": 10
   },
   {
-    "id": "BGcbdWI6",
+    "id": "QMQ7CIYH",
     "result": "凶",
     "description": "やや運気が低下しているかも。賭け事は控えると吉。\r\nバトラさんに煽ってもらって笑い飛ばしていきましょう。",
     "fileName": "10_kyo.png",
@@ -90,7 +90,7 @@
     "weight": 10
   },
   {
-    "id": "QXQAhAtd",
+    "id": "iTMSJp8i",
     "result": "小吉",
     "description": "ギャグのセンスが上昇してくるかも。\nルアン団長のような小粋なトークで場を盛り上げてみましょう。",
     "fileName": "11_shokichi.png",
@@ -99,7 +99,7 @@
     "weight": 10
   },
   {
-    "id": "qDWbrENj",
+    "id": "TJQr1t6s",
     "result": "末吉",
     "description": "クリエイティブなことに挑戦してみると、\n自分では気づいていなかった思わぬ才能を発見するかもしれません。",
     "fileName": "12_suekichi.png",
@@ -108,7 +108,7 @@
     "weight": 10
   },
   {
-    "id": "mbjWDGBo",
+    "id": "JuquKikH",
     "result": "凶",
     "description": "苦手なことにトライすることになるかも。\n苦戦するかもしれませんが、周囲の声援を得られて思いがけずうまくいくでしょう。",
     "fileName": "13_kyo.png",
@@ -117,7 +117,7 @@
     "weight": 10
   },
   {
-    "id": "AQ3dAWqe",
+    "id": "GMy6i4XM",
     "result": "バト吉",
     "description": "常バトからツッコミとはなんたるかという話を１時間聞けますﾔｯﾀﾈ",
     "fileName": "01_batokichi.png",
@@ -126,7 +126,7 @@
     "weight": 10
   },
   {
-    "id": "YrfaKgSq",
+    "id": "Q0gHDVRK",
     "result": "大吉",
     "description": "ソラコと目が合った君は今年最強だ！！！",
     "fileName": "02_daikichi.png",
@@ -135,7 +135,7 @@
     "weight": 10
   },
   {
-    "id": "HwDr4Om3",
+    "id": "FLwO5Y1G",
     "result": "小吉",
     "description": "加伊那からみかんが貰えます",
     "fileName": "03_shokichi.png",
@@ -144,7 +144,7 @@
     "weight": 10
   },
   {
-    "id": "vxQtYDoT",
+    "id": "iEHI3AV4",
     "result": "つづり吉",
     "description": "つづりと一緒に好きなものについて語り合えます。\nちなみに貴方は聞き上手ですか？",
     "fileName": "04_tsudurikichi.png",
@@ -153,7 +153,7 @@
     "weight": 10
   },
   {
-    "id": "7gv5VQGx",
+    "id": "YsDEwKRm",
     "result": "大吉",
     "description": "何でも懺悔していってね！後はあなた次第！美味しいケーキでリフレッシュ",
     "fileName": "01_daikichi.png",
@@ -162,7 +162,7 @@
     "weight": 10
   },
   {
-    "id": "KomDFuAQ",
+    "id": "UcTRidsB",
     "result": "特盛大吉",
     "description": "包味飯店、新年特別メニュー！！特盛大吉だよ！\nみんなたくさん食べて元気になろ〜",
     "fileName": "02_tokumori_daikichi.png",
@@ -171,7 +171,7 @@
     "weight": 10
   },
   {
-    "id": "Y7LqqSa0",
+    "id": "7mXi0PRQ",
     "result": "大凶",
     "description": "聖女様が何かを企んでいます😱\nが！災い転じて福となる！きっと良い事がおこるでしょう",
     "fileName": "03_daikyou.png",
@@ -180,7 +180,7 @@
     "weight": 10
   },
   {
-    "id": "0t8MSToT",
+    "id": "XobjXikL",
     "result": "大好き",
     "description": "あれ！？大吉の魔法だったのに〜！！\nまぁ、きみたちが笑顔になってるならいいか",
     "fileName": "04_daisuki.png",
@@ -189,7 +189,7 @@
     "weight": 10
   },
   {
-    "id": "DwLKdSvJ",
+    "id": "nDjnhOxL",
     "result": "凶",
     "description": "働きアニマルの世界にようこそ！楽しいよ？",
     "fileName": "05_kyo.png",
@@ -198,7 +198,7 @@
     "weight": 10
   },
   {
-    "id": "YnW32sSS",
+    "id": "22A1tPpq",
     "result": "大吉",
     "description": "私が大吉といったら大吉なのです！光あれ～",
     "fileName": "06_daikichi.png",
@@ -207,7 +207,7 @@
     "weight": 10
   },
   {
-    "id": "RVdOBjHf",
+    "id": "4m2A7djk",
     "result": "大吉",
     "description": "君の夢におじゃましちゃうよ！",
     "fileName": "07_daikichi.png",
@@ -216,7 +216,7 @@
     "weight": 10
   },
   {
-    "id": "qlUPYulG",
+    "id": "MWIBdcvh",
     "result": "凶",
     "description": "得意だと思っていたことでも負けてしまうこともあります\nどんまい！",
     "fileName": "08_kyo.png",
@@ -225,7 +225,7 @@
     "weight": 10
   },
   {
-    "id": "cdFLF3nR",
+    "id": "eK67qDLJ",
     "result": "ちょっとひとい吉",
     "description": "最近おつかれではありませんか？\nここらでちょっとひと息つきましょう💛 ",
     "fileName": "01_hitoikichi.png",
@@ -234,7 +234,7 @@
     "weight": 10
   },
   {
-    "id": "vsD35GQu",
+    "id": "XEmDRchy",
     "result": "よす吉",
     "description": "縁の下の力持ち！爆裂はたらきアニマル！！\n休息しっかり摂ることで、良い流れを掴みましょう。",
     "fileName": "01_yosukichi.png",
@@ -243,7 +243,7 @@
     "weight": 10
   },
   {
-    "id": "HqqQsOA7",
+    "id": "DsMhPB3G",
     "result": "大吉",
     "description": "信ぜよ\n貴君に良い縁が訪れる",
     "fileName": "02_daikichi.png",
@@ -252,7 +252,7 @@
     "weight": 10
   },
   {
-    "id": "YCjhu6cK",
+    "id": "1eqw2fdy",
     "result": "末吉",
     "description": "時をまち慎重に\n目標を定めたらあせらず進めよ",
     "fileName": "03_suekichi.png",

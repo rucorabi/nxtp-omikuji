@@ -13,15 +13,13 @@ type Props = {
   }>;
 };
 
-const baseUrl = `https://${PUBLISH_HOSTNAME}`;
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;
   const result = getById(fortunes, id);
   const title = `次星おみくじ`;
   const description = result.description.replace(/\n/g, " ");
-  const imageUrl = path.join(baseUrl, result.image);
   return {
+    metadataBase: new URL(`https://${PUBLISH_HOSTNAME}`),
     title,
     description,
     robots: "noindex,nofollow",
@@ -31,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [
         {
-          url: imageUrl,
+          url: result.image,
           width: 800,
           height: 418,
           alt: "抽選結果の画像です",

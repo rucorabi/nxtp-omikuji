@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(`https://${PUBLISH_HOSTNAME}`),
     title,
     description,
-    robots: "noindex,nofollow",
     openGraph: {
       type: "article",
       title,

@@ -60,7 +60,7 @@ export default function Template({ title, children }: Props) {
                 {children}
               </Paper>
               <Typography color="gray" sx={{ mt: 1, textAlign: "center" }}>
-                ※ 本ツールはファンメイドの非公式アプリです
+                ※ 本サイトはファンメイドの非公式アプリです
               </Typography>
             </Container>
           </Box>

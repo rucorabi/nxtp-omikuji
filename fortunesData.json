@@ -153,15 +153,6 @@
     "weight": 10
   },
   {
-    "id": "vsD35GQu",
-    "result": "よす吉",
-    "description": "縁の下の力持ち！爆裂はたらきアニマル！！\n休息しっかり摂ることで、良い流れを掴みましょう。",
-    "fileName": "01_yosukichi.png",
-    "creatorName": "麓山(はやま)るなやま",
-    "creatorScreenName": "hayamaluna",
-    "weight": 10
-  },
-  {
     "id": "7gv5VQGx",
     "result": "大吉",
     "description": "何でも懺悔していってね！後はあなた次第！美味しいケーキでリフレッシュ",
@@ -240,6 +231,33 @@
     "fileName": "01_hitoikichi.png",
     "creatorName": "めめめ・りの",
     "creatorScreenName": "mememe_rino",
+    "weight": 10
+  },
+  {
+    "id": "vsD35GQu",
+    "result": "よす吉",
+    "description": "縁の下の力持ち！爆裂はたらきアニマル！！\n休息しっかり摂ることで、良い流れを掴みましょう。",
+    "fileName": "01_yosukichi.png",
+    "creatorName": "麓山(はやま)るなやま",
+    "creatorScreenName": "hayamaluna",
+    "weight": 10
+  },
+  {
+    "id": "HqqQsOA7",
+    "result": "大吉",
+    "description": "信ぜよ\n貴君に良い縁が訪れる",
+    "fileName": "02_daikichi.png",
+    "creatorName": "麓山(はやま)るなやま",
+    "creatorScreenName": "hayamaluna",
+    "weight": 10
+  },
+  {
+    "id": "YCjhu6cK",
+    "result": "末吉",
+    "description": "時をまち慎重に\n目標を定めたらあせらず進めよ",
+    "fileName": "03_suekichi.png",
+    "creatorName": "麓山(はやま)るなやま",
+    "creatorScreenName": "hayamaluna",
     "weight": 10
   }
 ]

@@ -19,7 +19,7 @@ export function generateMetadata(): Metadata {
       description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
       images: [
         {
-          url: imagePath("/images/logo.png"),
+          url: imagePath("/images/logo.webp"),
           width: 600,
           height: 600,
           alt: "アプリのロゴ",

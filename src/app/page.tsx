@@ -11,7 +11,7 @@ export function generateMetadata(): Metadata {
 
   return {
     metadataBase: PUBLISH_HOSTNAME ? new URL(baseUrl) : undefined,
-    title: "次星おみくじ2025",
+    title: "次星おみくじ",
     description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
     openGraph: {
       type: "website",

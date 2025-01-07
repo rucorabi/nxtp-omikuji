@@ -308,5 +308,15 @@
     "description": "タル吉を引いたそこのアナタ\n今すぐにカレー屋に行き帰りにスーパーに寄って下さい。\nケーキがおそらく半額になってる筈です。お得です。",
     "fileName": "01_tarukichi.webp",
     "weight": 10
+  },
+  {
+    "id": "ssuRJich",
+    "resultOnly": false,
+    "creatorName": "狂気の山脈(Sirランカスター) ",
+    "creatorScreenName": "lancaster217",
+    "result": "吉",
+    "description": "失くしたものが出てくるかもしれないわね！\nあと、今日の目標は早めに立てなさい。",
+    "fileName": "01_kichi.webp",
+    "weight": 10
   }
 ]

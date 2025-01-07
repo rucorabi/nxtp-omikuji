@@ -290,18 +290,18 @@
     "weight": 10
   },
   {
-    "id": "dCubXVmf",
-    "resultOnly": true,
+    "id": "NATUpYCi",
+    "resultOnly": false,
     "creatorName": "しゆ",
     "creatorScreenName": "N4_teto",
     "result": "大凶",
     "description": "大凶が何？\nそんなもの美味しくいただいちゃったわよ？\nほら、もう一度引きなさい！",
-    "fileName": "01_daikyo.webp",
+    "fileName": "01_daikyo.png",
     "weight": 10
   },
   {
     "id": "gU7rljFC",
-    "resultOnly": true,
+    "resultOnly": false,
     "creatorName": "輝",
     "creatorScreenName": "teru_teru_ysg",
     "result": "タル吉",

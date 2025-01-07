@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
+    "prebuild": "rm -rf out",
+    "build": "./build.sh",
     "postbuild": "rm -rf ../nxtp.rucorabi.com/docs/apps/omikuji && cp -r out ../nxtp.rucorabi.com/docs/apps/omikuji",
     "dev": "next dev",
     "preserve": "next build",

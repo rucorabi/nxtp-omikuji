@@ -4,6 +4,7 @@ export type Fortune = {
   description: string;
   image: string;
   weight: number;
+  resultOnly: boolean;
   creator: {
     name: string;
     screenName: string;

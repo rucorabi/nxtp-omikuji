@@ -1,5 +1,4 @@
 import { use } from "react";
-import path from "node:path";
 import { Metadata } from "next";
 import { fortunes } from "../../fortunes";
 import { getById } from "../../../Fortunes";
@@ -18,8 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = getById(fortunes, id);
   const title = `次星おみくじ`;
   const description = result.description.replace(/\n/g, " ");
+
   return {
-    metadataBase: new URL(`https://${PUBLISH_HOSTNAME}`),
+    metadataBase: PUBLISH_HOSTNAME
+      ? new URL(`https://${PUBLISH_HOSTNAME}`)
+      : undefined,
     title,
     description,
     openGraph: {

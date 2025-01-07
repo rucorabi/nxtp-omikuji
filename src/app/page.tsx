@@ -10,7 +10,7 @@ export function generateMetadata(): Metadata {
   const baseUrl = `https://${PUBLISH_HOSTNAME}`;
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: PUBLISH_HOSTNAME ? new URL(baseUrl) : undefined,
     title: "次星おみくじ2025",
     description: "ファンメイドの非公式ねくすとぴあおみくじのアプリです",
     openGraph: {
@@ -33,11 +33,12 @@ export function generateMetadata(): Metadata {
   };
 }
 
+const filteredFotunes = fortunes.filter((f) => !f.resultOnly);
 const Page: NextPage = () => {
   return (
     <Template title="次星おみくじ2025">
       <Suspense>
-        <OmikujiApp fortunes={fortunes} />
+        <OmikujiApp fortunes={filteredFotunes} />
       </Suspense>
     </Template>
   );

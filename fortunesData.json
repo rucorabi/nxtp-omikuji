@@ -318,5 +318,25 @@
     "description": "失くしたものが出てくるかもしれないわね！\nあと、今日の目標は早めに立てなさい。",
     "fileName": "01_kichi.webp",
     "weight": 10
+  },
+  {
+    "id": "pAtuWqdB",
+    "resultOnly": false,
+    "creatorName": "おろろ",
+    "creatorScreenName": "0h_roro",
+    "result": "中吉",
+    "description": "タルタの投げキッスを見たあなた！\n今日ねくすとぴあの配信を見て推しライバーに愛を囁くとその日は大吉以上になるかも！？",
+    "fileName": "01_chukichi.webp",
+    "weight": 10
+  },
+  {
+    "id": "1HCq1a4R",
+    "resultOnly": false,
+    "creatorName": "おろろ",
+    "creatorScreenName": "0h_roro",
+    "result": "サン吉",
+    "description": "今日の運勢はサン吉！\nサン吉って何だって?サン吉は3期生の配信を見るとその日は吉になる運勢なのですよ。\n3期生へ愛を伝えると大吉になります。",
+    "fileName": "02_sankichi.webp",
+    "weight": 10
   }
 ]

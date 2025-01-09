@@ -3,10 +3,12 @@
 import React, { useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { Fade } from "@mui/material";
+import { sendGAEvent } from "@next/third-parties/google";
 
 import ReadyScene from "./ReadyScene";
 import ResultScene, { ResetButtonText, ShareForXButton } from "./ResultScene";
 import { Fortune, Fortunes, getWeightedRandomFortune } from "../Fortunes";
+import { send } from "process";
 
 type Props = {
   fortunes: Fortunes;
@@ -15,6 +17,7 @@ type Props = {
 const OmikujiApp = ({ fortunes }: Props) => {
   const params = useSearchParams();
   const debugResultId = params.get("__debug");
+  const [drawCount, setDrawCount] = useState(1);
 
   const [fortune, setFortune] = useState<Fortune>(() => {
     if (!debugResultId) return null;
@@ -31,6 +34,12 @@ const OmikujiApp = ({ fortunes }: Props) => {
     const img = new Image();
     img.src = selectedFortune.image; // preload
 
+    sendGAEvent("draw", {
+      fortuneId: selectedFortune.id,
+      drawCount: drawCount + 1,
+    });
+    setDrawCount((prev) => prev + 1);
+
     // アニメーションのための遅延
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -40,6 +49,8 @@ const OmikujiApp = ({ fortunes }: Props) => {
   }, []);
 
   const reset = useCallback(() => {
+    sendGAEvent("retry", { drawCount });
+
     setTimeout(() => {
       setIsDrawn(false);
       setFortune(null);

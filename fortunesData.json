@@ -338,5 +338,15 @@
     "description": "今日の運勢はサン吉！\nサン吉って何だって?サン吉は3期生の配信を見るとその日は吉になる運勢なのですよ。\n3期生へ愛を伝えると大吉になります。",
     "fileName": "02_sankichi.webp",
     "weight": 10
+  },
+  {
+    "id": "caoFraLl",
+    "resultOnly": false,
+    "creatorName": "chimaki",
+    "creatorScreenName": "chimaki0624",
+    "result": "抹茶",
+    "description": "タイムラインに抹茶スイーツが沢山流れてくるでしょう。\n間食はほどほどに。",
+    "fileName": "01_macha.webp",
+    "weight": 10
   }
 ]

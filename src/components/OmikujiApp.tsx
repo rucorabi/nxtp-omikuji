@@ -8,7 +8,6 @@ import { sendGAEvent } from "@next/third-parties/google";
 import ReadyScene from "./ReadyScene";
 import ResultScene, { ResetButtonText, ShareForXButton } from "./ResultScene";
 import { Fortune, Fortunes, getWeightedRandomFortune } from "../Fortunes";
-import { send } from "process";
 
 type Props = {
   fortunes: Fortunes;
@@ -34,7 +33,7 @@ const OmikujiApp = ({ fortunes }: Props) => {
     const img = new Image();
     img.src = selectedFortune.image; // preload
 
-    sendGAEvent("draw", {
+    sendGAEvent("event", "omikuji_draw", {
       fortuneId: selectedFortune.id,
       drawCount: drawCount + 1,
     });
@@ -49,8 +48,6 @@ const OmikujiApp = ({ fortunes }: Props) => {
   }, []);
 
   const reset = useCallback(() => {
-    sendGAEvent("retry", { drawCount });
-
     setTimeout(() => {
       setIsDrawn(false);
       setFortune(null);
